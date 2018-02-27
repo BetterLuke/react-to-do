@@ -9,13 +9,15 @@ export default (state = [], action) => {
                     text: action.text,
                     completed: false
                 },
-                ... state
+                ...state
             ]
         }
         case TOGGLE_TODO: {
             return state.map((todoItem) => {
                 if (todoItem.id === action.id) {
-                    return {... todoItem, completed: !todoItem.completed}
+                    return {...todoItem, completed: !todoItem.completed}
+                } else {
+                    return todoItem;
                 }
             })
         }
