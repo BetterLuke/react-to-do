@@ -9,6 +9,11 @@ class AddTodo extends Component {
         super(props);
 
         this.onSubmit = this.onSubmit.bind(this);
+        this.onInputChange = this.onInputChange.bind(this);
+
+        this.state = {
+            value: ""
+        }
     }
 
     onSubmit(ev) {
@@ -20,15 +25,13 @@ class AddTodo extends Component {
         }
 
         this.props.onAdd(inputValue);
-        this.setState({
-            value: ''
-        })
+        this.setState({value: ''});
     }
 
     onInputChange(event) {
         this.setState({
             value: event.target.value
-        })
+        });
     }
 
     render() {
