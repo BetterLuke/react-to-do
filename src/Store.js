@@ -1,8 +1,11 @@
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware, composeß} from "redux"
+import {reducer as todoReducer} from './todos'
+import {reducer as filterReducer} from './filter'
+import Perf from 'react-addons-perf'
 
-import {reducer as todoReducer} from './todos';
-import {reducer as filterReducer} from './filter';
+const win = window
 
+win.Perf = Perf
 
 const reducer = combineReducers({
     todos: todoReducer,

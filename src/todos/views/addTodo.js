@@ -10,7 +10,6 @@ class AddTodo extends Component {
 
         this.onSubmit = this.onSubmit.bind(this);
         this.onInputChange = this.onInputChange.bind(this);
-
         this.state = {
             value: ""
         }
