@@ -15,7 +15,7 @@ export default (state = [], action) => {
         case TOGGLE_TODO: {
             return state.map((todoItem) => {
                 if (todoItem.id === action.id) {
-                    return {...todoItem, completed: !todoItem.completed}
+                    return {...todoItem, completed: !todoItem.completed}//复制一个新的对象，并更改新对象中的某个字段，返回新的对象
                 } else {
                     return todoItem;
                 }
