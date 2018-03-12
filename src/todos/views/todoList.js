@@ -11,7 +11,7 @@ const TodoList = ({todos, onToggle, onRemoveTodo}) => {
         {
             todos.map((item) => (
                 <TodoItem
-                    key={item.id}
+                    key={item.id} //keyd的用法 帮助一个父组件下多个相同组件的更新性能优化，当key不变的时候，只会触发组件的更新行为，并不会触发重载
                     id={item.id}
                     text={item.text}
                     completed={item.completed}
